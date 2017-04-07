@@ -1,7 +1,7 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const App = require('./components/App');
+import App from './components/App';
 
 ReactDOM.render(<App />, document.getElementById('main'));
 

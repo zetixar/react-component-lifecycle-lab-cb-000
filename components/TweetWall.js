@@ -1,7 +1,7 @@
-const React = require('react');
-const Tweet = require('./Tweet');
+import React from 'react';
+import Tweet from './Tweet';
 
-class TweetWall extends React.Component {
+export default class TweetWall extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,5 +34,3 @@ class TweetWall extends React.Component {
     );
   }
 }
-
-module.exports = TweetWall;

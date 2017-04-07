@@ -1,8 +1,8 @@
-const React = require('react');
-const { shallow, mount } = require('enzyme');
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 
-const App = require('../components/App');
-const TweetWall = require('../components/TweetWall');
+import App from '../components/App';
+import TweetWall from '../components/TweetWall';
 
 describe('App', () => {
   it('will fetch a set of tweets on the initial render', () => {
