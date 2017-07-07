@@ -7,21 +7,21 @@ class App extends React.Component {
 
   constructor() {
     super();
-    
+
     this.state = {
       latestTweets: []
     };
   }
 
-  // TODO: componentWillMount()
-  // TODO: componentDidMount()
-  // TODO: componentWillUnmount()
-
-  startInterval = () => {
-    this.interval = setInterval(this.fetchTweets, 2000);
+  componentWillMount() {
+    this.fetchTweets();
   }
-
-  cleanUpInterval = () => clearInterval(this.interval);
+  componentDidMount() {
+    this.startInterval();
+  }
+  componentWillUnmount() {
+    this.cleanUpInterval();
+  }
 
   fetchTweets = () => {
     const newTweets = getTweets();
@@ -29,6 +29,12 @@ class App extends React.Component {
       latestTweets: newTweets
     });
   }
+
+  startInterval = () => {
+    this.interval = setInterval(this.fetchTweets, 2000);
+  }
+
+  cleanUpInterval = () => clearInterval(this.interval);
 
   render() {
     return (
